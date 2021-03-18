@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F to C</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1> <br>
+    <p>type a value in the Fahrenheit field to converter the value to Celcius</p><br>
+    <span><b>Fahrenheit</b></span> 
+    <input type="number" id="num" oninput="Check(this.value)" onchange="Check(this.value)"> <br><br>
+    <span><b>Celcius</b></span> &nbsp;
+    <span id="value"></span>
+
+    <script>
+        function Chuyendoi(value) {
+            return (value - 32)/1.8;
+        }
+        function Check(value) {
+            document.getElementById('value').innerText = Chuyendoi(value);
+        }
+
+    </script>
+</body>
+</html>
