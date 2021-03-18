@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <button onclick="ham1(document.getElementById('name').value);">click</button>
+    <h1 id="trave">
+
+    </h1>
+
+    <script>
+        function Checkdx(s,i,n) {
+            if(i >= n)
+                return true;
+            
+            if(s[i] !== s[n-1])  
+                return false;
+            else 
+                return Checkdx(s,++i,--n);
+                
+        }
+
+        function ham1(s) {
+            
+            document.getElementById('trave').innerText = (Checkdx(s,0,s.length));
+        }
+
+        
+    </script>
+</body>
+</html>
