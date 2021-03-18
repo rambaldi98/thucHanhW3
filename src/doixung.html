@@ -26,8 +26,10 @@
         }
 
         function ham1(s) {
-            
-            document.getElementById('trave').innerText = (Checkdx(s,0,s.length));
+            if(s.length == 0)
+                document.getElementById('trave').innerText = "nhap chuoi can kiem tra";
+            else
+            document.getElementById('trave').innerText =  (Checkdx(s,0,s.length));
         }
 
         
