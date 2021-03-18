@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkSNT(so) {
+            if(so < 2) return false;
+            else {
+                let i = 2;
+                let a = 0;
+            while(i <= Math.sqrt(so)) {
+                if(so % i == 0) 
+                    return false;
+                i ++;
+            }
+            return true;
+        }
+    
+    }
+    </script>
+</body>
+</html>
