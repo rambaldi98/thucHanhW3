@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //viet chuong trinh dao nguoc ky tu trong mang
+        function  swapArray(arr) {
+            if(arr.length == 0)
+                return -1;
+            let i = arr.length - 1;
+            while (i > arr.length/2) {
+                let temp = arr[i];
+                arr[i]   = arr[arr.length - 1 - i];
+                arr[arr.length - 1 - i] = temp;
+                i --;
+            }
+            return arr;
+        }
+
+
+    </script>
+</body>
+</html>
