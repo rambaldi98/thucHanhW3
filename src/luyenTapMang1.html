@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //bai 5 viet chuong trinh dem so am trong mang
+
+        function dem(arr) {
+            if(arr.length == 0)
+                return -1;
+            let i = arr.length - 1;
+            let sum = 0;
+            while (i >= 0) {
+                if(arr[i] < 0)
+                    sum ++;
+                i --;
+            }
+            return sum;
+        }
+    </script>
+</body>
+</html>
