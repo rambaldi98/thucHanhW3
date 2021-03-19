@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm</title>
+</head>
+<body>
+    
+
+    <h2>ADD NEW PRODUCT</h2>
+    <input type="text"  id="add">
+    <button onclick="add()">ADD</button> <br><br>
+
+    <div id="formEdit"></div>
+
+
+    <h3>DISPLAY ALL PRODUCT</h3>
+    <h4>Product Name</h4> <br><br>
+
+    <div id="tableProduct"></div>
+
+
+    <script>
+        let product = [];
+        function add () {
+            let temp = document.getElementById('add');
+            product.push(temp.value);
+            showDisplay();
+            temp.value = "";
+            temp.focus();
+        }
+
+        function remove(index) {
+            product = product.filter(function(e,i) {
+                return i !== index;
+            });
+            showDisplay();
+        }
+
+        function update(index) {
+            product[index] = document.getElementById('edit').value;
+            document.getElementById('formEdit').innerHTML = "";
+            showDisplay();
+        }
+
+        function showEdit(index) {
+            document.getElementById('formEdit').innerHTML = `
+            <input id="edit" type="text" name="" value='${product[index]}'>
+            <button onclick="update(${index});">Update</button>
+            `;
+            document.getElementById('edit').focus();
+        }
+
+        function showDisplay() {
+            let tableProduct = "<table>";
+            for (let i = 0; i < product.length; i++) {
+             tableProduct += `
+                <tr>
+                    <td>${product[i]}</td>
+                    <td><button onclick='showEdit(${i})'>Sửa</button></td>
+                    <td><button onclick='remove(${i})'>Xóa</button></td>
+                </tr>
+                `;
+        }
+        tableProduct += "</table>";
+        document.getElementById("tableProduct").innerHTML = tableProduct;
+        }
+        showDisplay();
+    </script>
+</body>
+</html>
