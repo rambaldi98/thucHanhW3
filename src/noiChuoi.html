@@ -13,6 +13,26 @@
             chuoi1 = chuoi.join();
             console.log(chuoi1);
         }
+
+        function chuyenDoi(){
+            let a = "hello my name is rambaldi";
+            let b = a.toUpperCase();
+            console.log(b);
+        }
+
+        function chen() {
+            let a = 213456786755423;
+            let b = a.toString();
+            let c = [b[0]];
+          
+            for(let i = 0; i < b.length - 1; i ++) {
+                if(b[i] % 2 == 0 && b[i+1] %2 == 0){
+                    c.push('-',b[i+1]);
+                }
+                else c.push(b[i+1]);
+            }
+            console.log(c.join(''));
+        }
     </script>
 </body>
 </html>
